@@ -1,0 +1,311 @@
+/*
+  メディアクエリ（モバイルファースト）
+  15、18行目のコメントアウトを外して使用してください。
+
+  ①
+  下記の書き方は、結構新しい書き方なのでブラウザのバージョンが古い場合、正常に動作しない可能性があります。
+  参考URL： https://zenn.dev/tonkotsuboy_com/articles/css-range-syntax
+
+  ②
+  VScodeのユーザースニペットを使うと便利かも？
+  参考URL： https://zenn.dev/miz_dev/articles/157a7aaad0bdcf
+*/
+
+/* 768px以上の場合のスタイル */
+/* @media (width > 767px) {} */
+
+/* 1024px以上の場合のスタイル */
+/* @media (width > 1023px) {} */
+
+/*
+  基本設定
+  使用するカラーをコメントで用意してるので使って下さい
+*/
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: system-ui;
+  color: #333;
+
+  /* メインカラー */
+  /* color: #fc7401; */
+
+  /* メインカラー（ホバー） */
+  /* color: #c95d00; */
+
+  /* ボーダー色 */
+  /* border-color: #f1f2f6; */
+
+  /* main背景色 */
+  /* background-color: #f4f9fa; */
+
+  /* footer背景色 */
+  /* background-color: #959ea7; */
+}
+
+/* header */
+.header {
+
+}
+
+.header-left {
+
+}
+
+.header-logo {
+
+}
+
+.header-nav {
+
+}
+
+.header-list {
+
+}
+
+.header-item {
+
+}
+
+.header-link {
+
+}
+
+.header-current {
+
+}
+
+.header-right {
+
+}
+
+.header-reservation {
+
+}
+
+.header-reservation .fa-calendar-days {
+
+}
+
+.header-reservation-text {
+
+}
+
+.header-notice {
+
+}
+
+.header-notice .fa-bell {
+
+}
+
+.header-mypage {
+
+}
+
+.header-mypage .fa-user {
+
+}
+
+.header-hamburger {
+
+}
+
+.header-hamburger .top {
+
+}
+
+.header-hamburger .center {
+
+}
+
+.header-hamburger .bottom {
+
+}
+
+/* main */
+.main {
+  flex-grow: 1;
+}
+
+.section {
+
+}
+
+.section-inner {
+
+}
+
+.section-title {
+
+}
+
+.section-head {
+
+}
+
+.section-link {
+
+}
+
+.section-link:hover {
+
+}
+
+.section-link::after {
+
+}
+
+.section-wrapper {
+
+}
+
+/* sidebar */
+.sidebar {
+
+}
+
+.sidebar-list {
+
+}
+
+.sidebar-link {
+
+}
+
+.sidebar-btn {
+
+}
+
+/* event */
+.event {
+
+}
+
+.event-head {
+
+}
+
+.event-period {
+
+}
+
+.event-wrapper {
+
+}
+
+.event-list {
+
+}
+
+.event-item {
+
+}
+
+.event-tab-current {
+
+}
+
+.event-tab {
+
+}
+
+/* boards */
+.boards {
+
+}
+
+.form {
+
+}
+
+.form-text {
+
+}
+
+.form-item {
+
+}
+
+.form-radio {
+
+}
+
+.form-label {
+
+}
+
+.boards-list {
+
+}
+
+.board {
+
+}
+
+.board-link {
+
+}
+
+.board-thumbnail {
+
+}
+
+.board-body {
+
+}
+
+.board-title {
+
+}
+
+.board-date {
+
+}
+
+.board-spot {
+
+}
+
+.board-bottom {
+
+}
+
+.board-category {
+
+}
+
+.board-tags {
+
+}
+
+.board-tag {
+
+}
+
+/* footer */
+.footer {
+
+}
+
+.footer-title {
+
+}
+
+.footer-list {
+
+}
+
+.footer-item {
+
+}
+
+.footer-link {
+
+}
+
+.footer-copyright {
+
+}
