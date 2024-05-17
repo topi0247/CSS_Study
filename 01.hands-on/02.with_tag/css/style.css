@@ -3,7 +3,7 @@
   15、18行目のコメントアウトを外して使用してください。
 
   ①
-  下記の書き方は、結構新しい書き方なのでブラウザのバージョンが古い場合、正常に動作しない可能性があります。
+  下記のメディアクエリの書き方は結構新しい書き方なので、ブラウザのバージョンが古い場合正常に動作しない可能性があります。
   参考URL： https://zenn.dev/tonkotsuboy_com/articles/css-range-syntax
 
   ②
@@ -22,9 +22,6 @@
   使用するカラーをコメントで用意してるので使って下さい
 */
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
   font-family: system-ui;
   color: #333;
 
@@ -127,7 +124,7 @@ body {
 
 /* main */
 .main {
-  flex-grow: 1;
+
 }
 
 .section {

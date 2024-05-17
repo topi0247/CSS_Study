@@ -1,6 +1,5 @@
 /*
   基本設定
-  使用するカラーをコメントで用意してるので使って下さい
 */
 body {
   display: flex;
@@ -8,21 +7,6 @@ body {
   min-height: 100vh;
   font-family: system-ui;
   color: #333;
-
-  /* メインカラー */
-  /* color: #fc7401; */
-
-  /* メインカラー（ホバー） */
-  /* color: #c95d00; */
-
-  /* ボーダー色 */
-  /* border-color: #f1f2f6; */
-
-  /* main背景色 */
-  /* background-color: #f4f9fa; */
-
-  /* footer背景色 */
-  /* background-color: #959ea7; */
 }
 
 /* header */
