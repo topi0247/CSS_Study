@@ -1,0 +1,42 @@
+/*
+  メディアクエリ（モバイルファースト）
+  15、18行目のコメントアウトを外して使用してください。
+
+  ①
+  下記のメディアクエリの書き方は結構新しい書き方なので、ブラウザのバージョンが古い場合正常に動作しない可能性があります。
+  参考URL： https://zenn.dev/tonkotsuboy_com/articles/css-range-syntax
+
+  ②
+  VScodeのユーザースニペットを使うと便利かも？
+  参考URL： https://zenn.dev/miz_dev/articles/157a7aaad0bdcf
+*/
+
+/* 768px以上の場合のスタイル */
+/* @media (width > 767px) {} */
+
+/* 1024px以上の場合のスタイル */
+/* @media (width > 1023px) {} */
+
+/*
+  基本設定
+  使用するカラーをコメントで用意してるので使って下さい
+*/
+body {
+  font-family: system-ui;
+  color: #333;
+
+  /* メインカラー */
+  /* color: #fc7401; */
+
+  /* メインカラー（ホバー） */
+  /* color: #c95d00; */
+
+  /* ボーダー色 */
+  /* border-color: #f1f2f6; */
+
+  /* main背景色 */
+  /* background-color: #f4f9fa; */
+
+  /* footer背景色 */
+  /* background-color: #959ea7; */
+}
