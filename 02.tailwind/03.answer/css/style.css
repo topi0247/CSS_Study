@@ -1,0 +1,54 @@
+/*
+  基本設定
+  使用するカラーをコメントで用意してるので使って下さい
+*/
+
+/* メインカラー */
+/* color: #fc7401; */
+
+/* メインカラー（ホバー） */
+/* color: #c95d00; */
+
+/* ボーダー色 */
+/* border-color: #f1f2f6; */
+
+/* main背景色 */
+/* background-color: #f4f9fa; */
+
+/* footer背景色 */
+/* background-color: #959ea7; */
+body {
+  font-family: system-ui;
+}
+
+.h-inherit {
+  height: inherit;
+}
+
+.margin-block-4 {
+  margin-block: 4px;
+}
+
+.padding-block-48 {
+  padding-block: 48px;
+}
+
+@media (width > 1023px) {
+  .event {
+    width: calc(100% - (224px + 32px));
+  }
+}
+
+@media (width > 1023px) {
+  .event-wrapper {
+    width: calc(100% - 190px);
+  }
+}
+
+.form-radio:checked + .form-label::before {
+  border-color: #fc7401;
+}
+
+.form-radio:checked + .form-label::after {
+  display: block;
+}
