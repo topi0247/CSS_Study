@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
+  <!-- meta情報 -->
+  <title>完全理解?CSS with tailwind</title>
+  <!-- css -->
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- TailwindCSS読み込み -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome読み込み -->
+  <script src="https://kit.fontawesome.com/0464af9094.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body class="flex flex-col min-h-screen text-[#333]">
+  <!-- header -->
+  <header class="flex justify-between items-center h-[50px] p-5 md:h-[65px]">
+    <div class="flex items-center gap-5 h-inherit">
+      <a href="" class="text-[#fc7401] tesxt-2xl font-bold md:text-3xl">RUNTEQ</a>
+      <nav class="hidden h-inherit lg:block">
+        <ul class="flex items-center gap-2 h-inherit">
+          <li class="h-inherit">
+            <a href="" class="flex items-center h-inherit ps-4 pe-4 text-base hover:opacity-70">カリキュラム</a>
+          </li>
+          <li class="h-inherit">
+            <a href="" class="flex items-center h-inherit ps-4 pe-4 text-base hover:opacity-70">就活ボード</a>
+          </li>
+          <li class="h-inherit">
+            <a href="" class="flex items-center h-inherit ps-4 pe-4 text-base hover:opacity-70">質問</a>
+          </li>
+          <li class="h-inherit">
+            <span href=""
+              class="flex relative items-center h-inherit ps-4 pe-4 text-[#fc7401] text-base font-bold after:absolute after:bottom-0 after:left-0 after:w-full after:h-[3px] after:bg-[#fc7401] after:content-[''] ">イベント</span>
+          </li>
+          <li class="h-inherit">
+            <a href="" class="flex items-center h-inherit ps-4 pe-4 text-base hover:opacity-70">求人</a>
+          </li>
+          <li class="h-inherit">
+            <a href="" class="flex items-center h-inherit ps-4 pe-4 text-base hover:opacity-70">その他</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex md:h-inherit">
+      <a href=""
+        class="flex justify-center items-center gap-1 p-3 bg-[#fc7401] text-white transition-all md:p-5 hover:bg-[#c95d00]">
+        <i class="fa-solid fa-calendar-days text-lg"></i>
+        <span class="header-reservation-text text-xs font-bold pt-1">面談予約</span>
+      </a>
+      <button type="button" class="flex justify-center items-center p-3 md:py-5 px-6">
+        <i class="fa-regular fa-bell text-xl"></i>
+      </button>
+      <a href="" class="hidden md:flex flex-col justify-center items-center gap-1 text-xs">
+        <i class="fa-solid fa-user border border-[#cdcdcd] rounded-full text-3xl"></i>
+        <span>マイページ</span>
+      </a>
+      <button class="flex flex-col justify-center items-center w-[44px] h-[44px]  md:hidden">
+        <span class="inline-block rounded w-5 h-[2px] bg-[#fc7401]"></span>
+        <span class="inline-block rounded w-5 h-[2px] bg-[#fc7401] margin-block-4"></span>
+        <span class="inline-block rounded w-5 h-[2px] bg-[#fc7401]"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- main -->
+  <main class="flex-grow bg-[#f4f9fa]">
+    <section class="h-full padding-block-48">
+      <div class="mx-auto ps-5 pe-5 max-w-[1280px]">
+        <h1 class="text-xl font-bold">イベント</h1>
+        <div class="mt-3 text-right">
+          <a href=""
+            class="inline-block relative text-[#fc7401] text-sm font-bold transition-all hover:text-[#c95d00] after:inline-block after:content-['>'] after:pl-2 adter:text-sm adter:font-bold">過去のイベント</a>
+        </div>
+        <div class="flex flex-col gap-6 mt-9 md:flex-row md:gap-8">
+          <!-- sidebar -->
+          <aside class="flex flex-col gap-[10px] md:gap-5 md:w-[224px]">
+            <ul>
+              <li>
+                <a href=""
+                  class="flex items-center gap-2 relative rounded-[4px] bg-white p-3 text-xs transition-all md:text-base hover:text-[#fc7401] text-[#fc7401]">
+                  <i class="fa-solid fa-flag"></i>
+                  <span>イベント一覧</span>
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""
+                  class="flex items-center gap-2 relative rounded-[4px] bg-white p-3 text-xs transition-all md:text-base hover:text-[#fc7401]">
+                  <i class="fa-solid fa-check"></i>
+                  <span>予約したイベント</span>
+                </a>
+              </li>
+              <li class="border-t border-[#f1f2f6]">
+                <a href=""
+                  class="flex items-center gap-2 relative rounded-[4px] bg-white p-3 text-xs transition-all md:text-base hover:text-[#fc7401]">
+                  <i class="fa-solid fa-calendar-check"></i>
+                  <span>本日参加予定のイベント</span>
+                </a>
+              </li>
+              <li class="border-t border-[#f1f2f6]">
+                <a href=""
+                  class="flex items-center gap-2 relative rounded-[4px] bg-white p-3 text-xs transition-all md:text-base hover:text-[#fc7401]">
+                  <i class="fa-solid fa-flag"></i>
+                  <span>主催のイベント</span>
+                </a>
+              </li>
+            </ul>
+            <ul>
+              <li>
+                <a href=""
+                  class="flex items-center gap-2 relative rounded-[4px] bg-white p-3 text-xs transition-all md:text-base hover:text-[#fc7401]">過去のイベント動画
+                  <i class="fa-solid fa-caret-down inline-block absolute right-3 text-[#fc7401]"></i>
+                </a>
+              </li>
+            </ul>
+            <a href=""
+              class="flex items-center gap-2 p-3 bg-[#fc7401] text-white text-xs font-bold transition-all md:text-base rounded hover:bg-[#c95d00]">
+              <i class="fa-solid fa-plus"></i>
+              <span>イベント作成</span>
+            </a>
+          </aside>
+          <!-- event -->
+          <div class="event">
+            <div class="flex flex-col gap-5 lg:flex-row lg:items-center">
+              <a href=""
+                class="block relative rounded border border-white bg-white p-3 text-xs hover:border-[#fc7401] md:w-[170px] md:text-base">すべての期間
+                <i
+                  class="fa-solid fa-caret-down inline-block absolute top-1/2 right-3 -translate-y-1/2 text-[#fc7401]"></i></a>
+              <div class="overflow-auto event-wrapper">
+                <ul class="flex gap-[10px] w-fit ms-auto me-auto md:gap-5 md:w-full">
+                  <li class="shrink-0">
+                    <span
+                      class="inline-block rounded p-1 bg-[#fc7401] text-white whitespace-nowrap md:p-3 text-sm">すべて</span>
+                  </li>
+                  <li class="shrink-0">
+                    <a href=""
+                      class="inline-block p-1 text-xs whitespace-nowrap transition-all md:p-3 md:text-sm hover:text-[#fc7401]">技術</a>
+                  </li>
+                  <li class="shrink-0">
+                    <a href=""
+                      class="inline-block p-1 text-xs whitespace-nowrap transition-all md:p-3 md:text-sm hover:text-[#fc7401]">マインドセット</a>
+                  </li>
+                  <li class="shrink-0">
+                    <a href=""
+                      class="inline-block p-1 text-xs whitespace-nowrap transition-all md:p-3 md:text-sm hover:text-[#fc7401]">キャリア</a>
+                  </li>
+                  <li class="shrink-0">
+                    <a href=""
+                      class="inline-block p-1 text-xs whitespace-nowrap transition-all md:p-3 md:text-sm hover:text-[#fc7401]">Webアプリ</a>
+                  </li>
+                  <li class="shrink-0">
+                    <a href=""
+                      class="inline-block p-1 text-xs whitespace-nowrap transition-all md:p-3 md:text-sm hover:text-[#fc7401]">交流</a>
+                  </li>
+                  <li class="shrink-0">
+                    <a href=""
+                      class="inline-block p-1 text-xs whitespace-nowrap transition-all md:p-3 md:text-sm hover:text-[#fc7401]">その他</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- boards -->
+            <div class="mt-5 rounded p-5 bg-white">
+              <form action="" method="get"
+                class="flex flex-col gap-2 border-b border-[#f1f2f6] pb-5 lg:flex-row lg:items-center lg:gap-4">
+                <span class="text-base">絞り込む：</span>
+                <div>
+                  <input id="all" type="radio" value="すべて" name="organizer" class="absolute opacity-0 form-radio"
+                    checked>
+                  <label for="all"
+                    class="relative pl-6 cursor-pointer text-base before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:w-5 before:h-5 before:rounded-full before:border-2 before:border-[#cdcdcd] after:hidden after:absolute after:top-1/2 after:left-[6px] after:-translate-y-1/2 after:w-2 after:h-2 after:rounded-full after:bg-[#fc7401] after:content-[''] after:transition-all form-label">すべて</label>
+                </div>
+                <div>
+                  <input id="official" type="radio" value="RUNTEQ主催（公式）" name="organizer"
+                    class="absolute opacity-0 form-radio">
+                  <label for="official"
+                    class="relative pl-6 cursor-pointer text-base before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:w-5 before:h-5 before:rounded-full before:border-2 before:border-[#cdcdcd] after:hidden after:absolute after:top-1/2 after:left-[6px] after:-translate-y-1/2 after:w-2 after:h-2 after:rounded-full after:bg-[#fc7401] after:content-[''] after:transition-all form-label">RUNTEQ主催（公式）</label>
+                </div>
+                <div>
+                  <input id="students" type="radio" value="受講生主催" name="organizer"
+                    class="absolute opacity-0 form-radio">
+                  <label for="students"
+                    class="relative pl-6 cursor-pointer text-base before:absolute before:top-1/2 before:left-0 before:-translate-y-1/2 before:w-5 before:h-5 before:rounded-full before:border-2 before:border-[#cdcdcd] after:hidden after:absolute after:top-1/2 after:left-[6px] after:-translate-y-1/2 after:w-2 after:h-2 after:rounded-full after:bg-[#fc7401] after:content-[''] after:transition-all form-label">受講生主催</label>
+                </div>
+              </form>
+              <div class="grid grid-cols-1 gap-5 mt-5 md:grid-cols-2 lg:grid-cols-3 gap-y-5 gap-x-6">
+                <article>
+                  <a href="" class="block rounded-md border border-[#f1f2f6] overflow-hidden hover:border-[#fc7401]">
+                    <img class="w-full object-cover" src="./img/thumbnail.png" alt="">
+                    <div class="p-[10px]">
+                      <h2 class="border-b border-b-[#f1f2f6] pb-[10px] text-sm">完全理解?CSS with tailwind</h2>
+                      <time class="flex items-center gap-1 mt-[10px] text-xs" datetime="2024-06-01">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>2024年06月01日(土) 13:00〜17:00</span>
+                      </time>
+                      <p class="flex items-center gap-1 mt-[10px] text-xs">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Zoom</span>
+                      </p>
+                      <div class="flex justify-between items-start gap-[10px] mt-[10px]">
+                        <span
+                          class="inline-block shrink-0 rounded py-1 px-2 bg-[#333] text-white text-xs">RUNTEQ公式</span>
+                        <ul class="flex justify-end flex-wrap gap-1">
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">技術</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">CSS</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+                <article>
+                  <a href="" class="block rounded-md border border-[#f1f2f6] overflow-hidden hover:border-[#fc7401]">
+                    <img class="w-full object-cover" src="./img/thumbnail.png" alt="">
+                    <div class="p-[10px]">
+                      <h2 class="border-b border-b-[#f1f2f6] pb-[10px] text-sm">完全理解?CSS with tailwind</h2>
+                      <time class="flex items-center gap-1 mt-[10px] text-xs" datetime="2024-06-01">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>2024年06月01日(土) 13:00〜17:00</span>
+                      </time>
+                      <p class="flex items-center gap-1 mt-[10px] text-xs">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Zoom</span>
+                      </p>
+                      <div class="flex justify-between items-start gap-[10px] mt-[10px]">
+                        <span
+                          class="inline-block shrink-0 rounded py-1 px-2 bg-[#333] text-white text-xs">RUNTEQ公式</span>
+                        <ul class="flex justify-end flex-wrap gap-1">
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">技術</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">CSS</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+                <article>
+                  <a href="" class="block rounded-md border border-[#f1f2f6] overflow-hidden hover:border-[#fc7401]">
+                    <img class="w-full object-cover" src="./img/thumbnail.png" alt="">
+                    <div class="p-[10px]">
+                      <h2 class="border-b border-b-[#f1f2f6] pb-[10px] text-sm">完全理解?CSS with tailwind</h2>
+                      <time class="flex items-center gap-1 mt-[10px] text-xs" datetime="2024-06-01">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>2024年06月01日(土) 13:00〜17:00</span>
+                      </time>
+                      <p class="flex items-center gap-1 mt-[10px] text-xs">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Zoom</span>
+                      </p>
+                      <div class="flex justify-between items-start gap-[10px] mt-[10px]">
+                        <span
+                          class="inline-block shrink-0 rounded py-1 px-2 bg-[#333] text-white text-xs">RUNTEQ公式</span>
+                        <ul class="flex justify-end flex-wrap gap-1">
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">技術</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">CSS</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+                <article>
+                  <a href="" class="block rounded-md border border-[#f1f2f6] overflow-hidden hover:border-[#fc7401]">
+                    <img class="w-full object-cover" src="./img/thumbnail.png" alt="">
+                    <div class="p-[10px]">
+                      <h2 class="border-b border-b-[#f1f2f6] pb-[10px] text-sm">完全理解?CSS with tailwind</h2>
+                      <time class="flex items-center gap-1 mt-[10px] text-xs" datetime="2024-06-01">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>2024年06月01日(土) 13:00〜17:00</span>
+                      </time>
+                      <p class="flex items-center gap-1 mt-[10px] text-xs">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Zoom</span>
+                      </p>
+                      <div class="flex justify-between items-start gap-[10px] mt-[10px]">
+                        <span
+                          class="inline-block shrink-0 rounded py-1 px-2 bg-[#333] text-white text-xs">RUNTEQ公式</span>
+                        <ul class="flex justify-end flex-wrap gap-1">
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">技術</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">CSS</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+                <article>
+                  <a href="" class="block rounded-md border border-[#f1f2f6] overflow-hidden hover:border-[#fc7401]">
+                    <img class="w-full object-cover" src="./img/thumbnail.png" alt="">
+                    <div class="p-[10px]">
+                      <h2 class="border-b border-b-[#f1f2f6] pb-[10px] text-sm">完全理解?CSS with tailwind</h2>
+                      <time class="flex items-center gap-1 mt-[10px] text-xs" datetime="2024-06-01">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>2024年06月01日(土) 13:00〜17:00</span>
+                      </time>
+                      <p class="flex items-center gap-1 mt-[10px] text-xs">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Zoom</span>
+                      </p>
+                      <div class="flex justify-between items-start gap-[10px] mt-[10px]">
+                        <span
+                          class="inline-block shrink-0 rounded py-1 px-2 bg-[#333] text-white text-xs">RUNTEQ公式</span>
+                        <ul class="flex justify-end flex-wrap gap-1">
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">技術</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">CSS</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+                <article>
+                  <a href="" class="block rounded-md border border-[#f1f2f6] overflow-hidden hover:border-[#fc7401]">
+                    <img class="w-full object-cover" src="./img/thumbnail.png" alt="">
+                    <div class="p-[10px]">
+                      <h2 class="border-b border-b-[#f1f2f6] pb-[10px] text-sm">完全理解?CSS with tailwind</h2>
+                      <time class="flex items-center gap-1 mt-[10px] text-xs" datetime="2024-06-01">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>2024年06月01日(土) 13:00〜17:00</span>
+                      </time>
+                      <p class="flex items-center gap-1 mt-[10px] text-xs">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Zoom</span>
+                      </p>
+                      <div class="flex justify-between items-start gap-[10px] mt-[10px]">
+                        <span
+                          class="inline-block shrink-0 rounded py-1 px-2 bg-[#333] text-white text-xs">RUNTEQ公式</span>
+                        <ul class="flex justify-end flex-wrap gap-1">
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">技術</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">CSS</li>
+                          <li class="inline-block rounded-xl py-[2px] px-2 bg-[#fc7401] text-white text-xs">Tailwind
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="mt-auto p-5 bg-[#959ea7] md:p-12">
+    <p class="text-white text-xl font-bold text-center md:text-left">RUNTEQ（ランテック）</p>
+    <ul class="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
+      <li>
+        <a href="" class="text-white text-sm underline">学習サービスについて</a>
+      </li>
+    </ul>
+    <ul class="mt-5 flex flex-wrap justify-center gap-2 md:justify-start">
+      <li>
+        <a href="" class="text-white text-sm underline">運営会社</a>
+      </li>
+      <li>
+        <a href="" class="text-white text-sm underline">利用規約/特定商取引法に基づく表記</a>
+      </li>
+      <li>
+        <a href="" class="text-white text-sm underline">お問い合わせ</a>
+      </li>
+    </ul>
+    <p class="mt-5 text-white text-sm text-center md:text-left">&copy; Copyright</p>
+  </footer>
+</body>
+
+</html>
