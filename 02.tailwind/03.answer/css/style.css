@@ -33,7 +33,7 @@ body {
   padding-block: 48px;
 }
 
-@media (width > 1023px) {
+@media (width > 767px) {
   .event {
     width: calc(100% - (224px + 32px));
   }
