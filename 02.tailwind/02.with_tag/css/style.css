@@ -19,30 +19,36 @@
 /* background-color: #959ea7; */
 body {
   font-family: system-ui;
-  color: #333;
 }
 
 .h-inherit {
+  height: inherit;
 }
 
 .margin-block-4 {
+  margin-block: 4px;
 }
 
 .padding-block-48 {
+  padding-block: 48px;
 }
 
-@media (width > 1023px) {
+@media (width > 767px) {
   .event {
+    width: calc(100% - (224px + 32px));
   }
 }
 
 @media (width > 1023px) {
   .event-wrapper {
+    width: calc(100% - 190px);
   }
 }
 
 .form-radio:checked + .form-label::before {
+  border-color: #fc7401;
 }
 
 .form-radio:checked + .form-label::after {
+  display: block;
 }
