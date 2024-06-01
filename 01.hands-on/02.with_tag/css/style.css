@@ -560,27 +560,17 @@ body {
 }
 
 .boards-list {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
-  /* 上のgapは下記と同じ */
-  /* column-gap: 20px; */
-  /* row-gap: 20px; */
-  /* コメントがこれで打てるよ！ */
-  margin-top: 20px;
 }
 
 /* 768px以上の場合のスタイル */
 @media (width > 767px) {
   .boards-list {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
 /* 1024px以上の場合のスタイル */
 @media (width > 1023px) {
   .boards-list {
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -588,83 +578,33 @@ body {
 }
 
 .board-link {
-  /* aタグはinline要素 */
-  /* blockは高さと横幅の指定ができる！ */
-  /* padding（余白）もblockなら指定できる！ */
-  display: block;
-  border-radius: 6px;
-  /* タグの中の画像はこれを入れないと丸まってくれない */
-  /* overflowは親要素より子要素がはみ出たらどうするかというプロパティ */
-  overflow: hidden;
-  border: 1px solid #f1f2f6;
 }
 
 .board-thumbnail {
-  /* カード系はcoverが多い */
-  object-fit: cover;
-  /* サイズ比率 */
-  aspect-ratio: 16 / 9;
-  width: 100%;
 }
 
 .board-body {
-  padding: 10px;
 }
 
 .board-title {
-  border-bottom: 1px solid #f1f2f6;
-  padding-bottom: 10px;
-  font-size: 14px;
 }
 
 .board-date {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  font-size: 12px;
-  margin-top: 10px;
 }
 
 .board-spot {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-  font-size: 12px;
-  margin-top: 10px;
 }
 
 .board-bottom {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
 }
 
 .board-category {
-  display: inline-block;
-  color: white;
-  background-color: #333;
-  padding: 4px 8px;
-  border-radius: 4px;
-  flex-shrink: 0;
-  font-size: 12px;
 }
 
 .board-tags {
-  display: flex;
-  gap: 4px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 .board-tag {
-  display: inline-block;
-  background-color: #fc7401;
-  color: white;
-  padding: 2px 8px;
-  font-size: 12px;
-  border-radius: 12px;
 }
 
 /* footer */
